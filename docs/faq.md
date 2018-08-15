@@ -24,7 +24,10 @@ range protection, prohibiting deleting rows, ...), make sure you enable
 worksheet security. This can for example be done like this:
 
 ``` php
+//Worksheet protection without password
 $spreadsheet->getActiveSheet()->getProtection()->setSheet(true);
+//Worksheet with password protection
+$spreadsheet->getActiveSheet()->getProtection()->setSheet(true)->setPassword("your password");
 ```
 
 ## Feature X is not working with Reader\_Y / Writer\_Z
